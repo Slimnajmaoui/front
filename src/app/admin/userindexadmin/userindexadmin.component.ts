@@ -3,7 +3,7 @@
 @Component({
   selector: 'app-userindexadmin',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './userindexadmin.component.html',
   styleUrls: './userindexadmin.component.css']
 })
