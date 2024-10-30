@@ -22,22 +22,12 @@ import { FooterComponent } from '../../admin/footer/footer.component';
 export class AdmincreateabsenceComponent {
   
   form!: FormGroup;
-      
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+
   constructor(
     public absenceService: AbsenceService,
     private router: Router
   ) { }
-      
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   ngOnInit(): void {
     this.form = new FormGroup({
     titre: new FormControl('', [Validators.required]),
