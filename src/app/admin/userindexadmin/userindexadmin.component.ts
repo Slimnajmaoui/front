@@ -29,7 +29,7 @@ import { Admin } from '../admin';
   standalone: true,
   imports: [CommonModule, RouterModule,FooterComponent,HeaderComponent,MenuComponent],
   templateUrl: './adminindexadmin.component.html',
-  styleUrl: './adminindexadmin.component.css'
+  styleUrls: './adminindexadmin.component.css'
 })
 export class AdminindexadminComponent {
 
@@ -39,11 +39,7 @@ export class AdminindexadminComponent {
  
   constructor(public adminService: AdminService, private router: Router) { }
     
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   ngOnInit(): void {
     console.log(this.router.url);
     console.log( window.location.href);
@@ -53,11 +49,7 @@ export class AdminindexadminComponent {
     })  
   }
     
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   deleteAdmin(id:number){
     this.adminService.delete(id).subscribe(res => {
          this.admins = this.admins.filter(item => item._id !== id);
