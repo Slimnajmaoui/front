@@ -5,7 +5,7 @@
   standalone: true,
   imports: [],
   templateUrl: './userviewadmin.component.html',
-  styleUrl: './userviewadmin.component.css'
+  styleUrl: './userviewadmin.component.css']
 })
 export class UserviewadminComponent {
 
