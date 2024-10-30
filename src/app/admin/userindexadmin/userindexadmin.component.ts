@@ -1,16 +1,5 @@
 
 
-@Component({
-  selector: 'app-userindexadmin',
-  standalone: true,
-  imports: [],
-  templateUrl: './userindexadmin.component.html',
-  styleUrl: './userindexadmin.component.css'
-})
-export class UserindexadminComponent {
-
-}
-
 
 
 
