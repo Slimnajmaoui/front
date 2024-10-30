@@ -1,17 +1,5 @@
 
 
-@Component({
-  selector: 'app-userviewadmin',
-  standalone: true,
-  imports: [],
-  templateUrl: './userviewadmin.component.html',
-  styleUrl: './userviewadmin.component.css'
-})
-export class UserviewadminComponent {
-
-}
-
-
 
 
 import { HeaderComponent } from '../../admin/header/header.component';
