@@ -14,29 +14,17 @@ export class AbsenceService {
     
   private apiURL = "http://localhost:8081/api";
       
-  /*------------------------------------------
-  --------------------------------------------
-  Http Header Options
-  --------------------------------------------
-  --------------------------------------------*/
+  
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
   }
      
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+
   constructor(private httpClient: HttpClient) { }
       
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   getAll(): Observable<any> {
 
    
@@ -46,11 +34,7 @@ export class AbsenceService {
     )
   }
       
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   create(absence:Absence): Observable<any> {
 
    
@@ -60,11 +44,7 @@ export class AbsenceService {
     )
   }  
     
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   find(id:number): Observable <any>{
 
   
@@ -74,11 +54,7 @@ export class AbsenceService {
     )
   }
     
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   update(id:number, absence:Absence): Observable <any>{
 
   
@@ -88,11 +64,7 @@ export class AbsenceService {
     )
   }
        
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   delete(id:number){
     return this.httpClient.delete(this.apiURL + '/absences/' + id, this.httpOptions)
     .pipe(
@@ -100,11 +72,7 @@ export class AbsenceService {
     )
   }
       
-  /** 
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   errorHandler(error:any) {
     let errorMessage = '';
     if(error.error instanceof ErrorEvent) {
