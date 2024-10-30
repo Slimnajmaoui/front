@@ -5,7 +5,7 @@
   standalone: true,
   imports: [],
   templateUrl: './userindexadmin.component.html',
-  styleUrls: './userindexadmin.component.css'
+  styleUrls: './userindexadmin.component.css']
 })
 export class UserindexadminComponent {
 
