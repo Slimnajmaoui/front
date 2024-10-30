@@ -1,5 +1,16 @@
 
 
+@Component({
+  selector: 'app-userindexadmin',
+  standalone: true,
+  imports: [],
+  templateUrl: './userindexadmin.component.html',
+  styleUrl: './userindexadmin.component.css'
+})
+export class UserindexadminComponent {
+
+}
+
 
 
 
@@ -18,7 +29,7 @@ import { Admin } from '../admin';
   standalone: true,
   imports: [CommonModule, RouterModule,FooterComponent,HeaderComponent,MenuComponent],
   templateUrl: './adminindexadmin.component.html',
-  styleUrls: './adminindexadmin.component.css'
+  styleUrl: './adminindexadmin.component.css'
 })
 export class AdminindexadminComponent {
 
