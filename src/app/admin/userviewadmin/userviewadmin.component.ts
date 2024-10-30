@@ -5,6 +5,8 @@ import { FooterComponent } from '../../admin/footer/footer.component';
 import { AdminService } from '../admin.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Admin } from '../admin';
+import { UserviewadminComponent } from './userviewadmin.component';
+
 
 @Component({
   selector: 'app-userviewadmin',
