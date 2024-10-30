@@ -28,8 +28,8 @@ import { Admin } from '../admin';
   selector: 'app-adminindexadmin',
   standalone: true,
   imports: [CommonModule, RouterModule,FooterComponent,HeaderComponent,MenuComponent],
-  templateUrl: './adminindexadmin.component.html',
-  styleUrls: './adminindexadmin.component.css'
+  templateUrl: './userindexadmin.component.html',  
+  styleUrls: ['./userindexadmin.component.css'] 
 })
 export class AdminindexadminComponent {
 
