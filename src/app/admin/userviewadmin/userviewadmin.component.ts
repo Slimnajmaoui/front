@@ -1,11 +1,3 @@
-import { Component, OnInit } from '@angular/core';
-import { HeaderComponent } from '../../admin/header/header.component';
-import { MenuComponent } from '../../admin/menu/menu.component';
-import { FooterComponent } from '../../admin/footer/footer.component';
-import { AdminService } from '../admin.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Admin } from '../admin';
-import { UserviewadminComponent } from './userviewadmin.component';
 
 
 @Component({
@@ -13,32 +5,59 @@ import { UserviewadminComponent } from './userviewadmin.component';
   standalone: true,
   imports: [],
   templateUrl: './userviewadmin.component.html',
-  styleUrls: ['./userviewadmin.component.css']  // Correction ici
+  styleUrl: './userviewadmin.component.css'
 })
-export class UserviewadminComponent { }
+export class UserviewadminComponent {
 
+}
+
+
+
+
+import { HeaderComponent } from '../../admin/header/header.component';
+import { MenuComponent } from '../../admin/menu/menu.component';
+import { FooterComponent } from '../../admin/footer/footer.component';
+
+import { Component } from '@angular/core';
+  
+import { AdminService } from '../admin.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Admin } from '../admin';
+  
 @Component({
   selector: 'app-adminviewadmin',
   standalone: true,
-  imports: [FooterComponent, HeaderComponent, MenuComponent],
+  imports: [FooterComponent,HeaderComponent,MenuComponent],
   templateUrl: './adminviewadmin.component.html',
-  styleUrls: ['./adminviewadmin.component.css']  // Correction ici
+  styleUrl: './adminviewadmin.component.css'
 })
-export class AdminviewadminComponent implements OnInit {  // Implémentation de OnInit
-
+export class AdminviewadminComponent {
+  
   id!: number;
   admin!: Admin;
-
+      
+  /*------------------------------------------
+  --------------------------------------------
+  Created constructor
+  --------------------------------------------
+  --------------------------------------------*/
   constructor(
     public adminService: AdminService,
     private route: ActivatedRoute,
     private router: Router
-  ) { }
-
+   ) { }
+      
+  /**
+   * Write code on Method
+   *
+   * @return response()
+   */
   ngOnInit(): void {
     this.id = this.route.snapshot.params['adminId'];
-    this.adminService.find(this.id).subscribe((data: Admin) => {
+          
+    this.adminService.find(this.id).subscribe((data: Admin)=>{
       this.admin = data;
     });
   }
+  
 }
