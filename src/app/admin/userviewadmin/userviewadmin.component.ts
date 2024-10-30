@@ -17,29 +17,21 @@ import { Admin } from '../admin';
   standalone: true,
   imports: [FooterComponent,HeaderComponent,MenuComponent],
   templateUrl: './adminviewadmin.component.html',
-  styleUrl: './adminviewadmin.component.css'
+  styleUrs: './adminviewadmin.component.css'
 })
 export class AdminviewadminComponent {
   
   id!: number;
   admin!: Admin;
       
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+  
   constructor(
     public adminService: AdminService,
     private route: ActivatedRoute,
     private router: Router
    ) { }
       
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   ngOnInit(): void {
     this.id = this.route.snapshot.params['adminId'];
           
