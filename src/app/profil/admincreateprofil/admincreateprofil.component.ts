@@ -23,11 +23,7 @@ export class AdmincreateprofilComponent {
   
   form!: FormGroup;
       
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+ 
   constructor(
     public profilService: ProfilService,
     private router: Router

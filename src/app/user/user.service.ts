@@ -61,7 +61,9 @@ const pr = "Admin";
         .pipe(
           catchError(this.errorHandler)
         )
+        
       }
+      
   
   /**
    * Write code on Method
@@ -77,6 +79,7 @@ const pr = "Admin";
     )
   }  
   create2(user:any,profil:any ): Observable<any> {
+    
    
     return this.httpClient.post(this.apiURL + '/Users?profil='+profil, JSON.stringify(user), this.httpOptions)
     .pipe(

@@ -25,12 +25,7 @@ import { UsermenuComponent } from '../../user/usermenu/usermenu.component';
 export class UsercreategroupeComponent {
   
   form!: FormGroup;
-      
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+ 
   constructor(
     public groupeService: GroupeService,
     private router: Router

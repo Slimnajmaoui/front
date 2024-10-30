@@ -23,11 +23,7 @@ export class AdmincreateuserComponent {
   
   form!: FormGroup;
       
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+  
   constructor(
     public userService: UserService,
     private router: Router

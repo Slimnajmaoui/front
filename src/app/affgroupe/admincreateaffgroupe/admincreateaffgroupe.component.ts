@@ -14,6 +14,8 @@ import { Router } from '@angular/router';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserService } from '../../user/user.service';
 import { GroupeService } from '../../groupe/groupe.service';
+
+
   
 @Component({
   selector: 'app-admincreateaffgroupe',
@@ -27,14 +29,11 @@ export class AdmincreateaffgroupeComponent {
   form!: FormGroup;
   alluser:any ;    
   gr:any ;
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+  
   constructor(
     public affgroupeService: AffgroupeService,public userservice:UserService,
-    private router: Router, public groupeService: GroupeService
+    private router: Router, public groupeService: GroupeService ,
+    
   ) { }
       
   /**
@@ -59,7 +58,9 @@ export class AdmincreateaffgroupeComponent {
     this.alluser=res ; 
 
   })
+  
   }
+  
       
   /**
    * Write code on Method

@@ -61,27 +61,40 @@
 
 
         <div class="form-group">
-            <label for="datecreation">datecreation:</label>
+            <label for="datecreation">date creation:</label>
             <input 
                 formControlName="datecreation"
                 id="datecreation" 
-                type="text" 
+                type="date" 
                 class="form-control">
             <div *ngIf="f['datecreation'].touched && f['datecreation'].invalid" class="alert alert-danger">
                 <div *ngIf="f['datecreation'].errors && f['datecreation'].errors['required']">datecreation is required.</div>
             </div>
         </div>
+<div class="form-group">
+    <label for="datecreation">date creation:</label>
+    <input 
+        formControlName="datecreation"
+        id="datecreation" 
+        type="date" 
+        class="form-control">
+    <div *ngIf="f['datecreation'].touched && f['datecreation'].invalid" class="alert alert-danger">
+        <div *ngIf="f['datecreation'].errors && f['datecreation'].errors['required']">datecreation is required.</div>
+    </div>
+        
+        </div>
         <div class="form-group">
-            <label for="datemodification">datemodification:</label>
+            <label for="datemodification">date modification:</label>
             <input 
                 formControlName="datemodification"
                 id="datemodification" 
-                type="text" 
+                type="date" 
                 class="form-control">
             <div *ngIf="f['datemodification'].touched && f['datemodification'].invalid" class="alert alert-danger">
                 <div *ngIf="f['datemodification'].errors && f['datemodification'].errors['required']">datemodification is required.</div>
             </div>
         </div>
+        
 
 
 

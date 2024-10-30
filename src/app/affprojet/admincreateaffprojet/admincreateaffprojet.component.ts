@@ -50,12 +50,13 @@ pro:any ;
     datemodification: new FormControl('', [Validators.required]),
     idprojet: new FormControl('', [Validators.required]),
     });
-    this.userservice.getAll().subscribe((res)=>{
+    this.userservice.Userbyprofil().subscribe((res)=>{
       this.alluser=res ; 
     })
     this.projetService.getAll().subscribe((data: any)=>{
       this.pro = data;
     })  
+    
   }
       
   /**
@@ -72,6 +73,8 @@ pro:any ;
    *
    * @return response()
    */
+
+  
   submit(){
     let affe ={
   

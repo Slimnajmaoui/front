@@ -12,6 +12,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Affprojet } from '../affprojet';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserService } from '../../user/user.service';
+import { ProjetService } from '../../projet/projet.service';
+
   
 @Component({
   selector: 'app-admineditaffprojet',
@@ -33,15 +35,11 @@ export class AdmineditaffprojetComponent {
   etat:any;
   user:any ;
   projet:any ;
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+ 
   constructor(
     public affprojetService: AffprojetService,
     private route: ActivatedRoute,public userservice:UserService,
-    private router: Router,public projetService: AffprojetService
+    private router: Router,public projetService: ProjetService
   ) { }
       
   /**

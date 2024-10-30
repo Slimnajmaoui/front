@@ -27,11 +27,7 @@ export class UsercreateuserComponent {
   
   form!: FormGroup;
       
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+
   constructor(
     public userService: UserService,
     private router: Router

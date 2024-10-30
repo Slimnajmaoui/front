@@ -68,10 +68,10 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="idprojet">idtache:</label>
+            <label for="idprojet">id tache:</label>
          
             <select [(ngModel)]="this.aff.tache.id" class="form-select" aria-label="Default select example" formControlName="idtache" id="idtache">
-                <option selected>séléctionner idprojet</option>
+                <option selected>séléctionner id projet</option>
                 <option *ngFor="let u of t" [value]="u.id">{{u.nom}} </option>
               
               </select>
@@ -100,9 +100,9 @@
 
 
         <div class="form-group">
-            <label for="iduser">séléctionner iduser:</label>
+            <label for="iduser">séléctionner id user:</label>
             <select [(ngModel)]="this.aff.user.id" class="form-select" aria-label="Default select example" formControlName="iduser" id="iduser">
-  <option selected>séléctionner iduser</option>
+  <option selected>séléctionner id user</option>
   <option *ngFor="let u of alluser" [value]="u.id">{{u.nom}} {{u.prenom}} </option>
 
 </select>
@@ -116,7 +116,7 @@
 
 
         <div class="form-group">
-            <label for="datecreation">datecreation:</label>
+            <label for="datecreation">date creation:</label>
             <input 
                 formControlName="datecreation"
                 id="datecreation" 
@@ -128,7 +128,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="datemodification">datemodification:</label>
+            <label for="datemodification">date modification:</label>
             <input 
                 formControlName="datemodification"
                 id="datemodification" 

@@ -5,7 +5,7 @@
 
 
 
-<!--slim-->
+
 
 
       <div class="main-content">
@@ -17,7 +17,7 @@
           
 
 <div class="container">
-    <h1>Create New Data : </h1>
+    <h1>Create New  : </h1>
   
         
     <form [formGroup]="form" (ngSubmit)="submit()">
@@ -62,7 +62,7 @@
 
 
         <div class="form-group">
-            <label for="iduser">séléctionner iduser:</label>
+            <label for="iduser">séléctionner user:</label>
             <select class="form-select" aria-label="Default select example" formControlName="iduser" id="iduser">
   <option selected>séléctionner iduser</option>
   <option *ngFor="let u of alluser" [value]="u.id">{{u.nom}} {{u.prenom}} </option>
@@ -72,7 +72,7 @@
 
 
         <div class="form-group">
-            <label for="iduser">séléctionner idGroupe:</label>
+            <label for="iduser">séléctionner Groupe:</label>
             <select class="form-select" aria-label="Default select example" formControlName="idgroupe" id="idgroupe">
   <option selected>séléctionner idgroupe</option>
   <option *ngFor="let g of gr" [value]="g.id">{{g.nom}}  </option>
@@ -94,7 +94,7 @@
 
 
         <div class="form-group">
-            <label for="datecreation">datecreation:</label>
+            <label for="datecreation">date creation:</label>
             <input 
                 formControlName="datecreation"
                 id="datecreation" 
@@ -105,7 +105,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="datemodification">datemodification:</label>
+            <label for="datemodification">date modification:</label>
             <input 
                 formControlName="datemodification"
                 id="datemodification" 
