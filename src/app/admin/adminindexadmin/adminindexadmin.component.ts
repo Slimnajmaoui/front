@@ -17,18 +17,14 @@ import { Admin } from '../admin';
   standalone: true,
   imports: [CommonModule, RouterModule,FooterComponent,HeaderComponent,MenuComponent],
   templateUrl: './adminindexadmin.component.html',
-  styleUrl: './adminindexadmin.component.css'
+  styleUrls: './adminindexadmin.component.css'
 })
 export class AdminindexadminComponent {
 
 
   admins: Admin[] = [];
     
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+ 
   constructor(public adminService: AdminService, private router: Router) { }
     
   /**
