@@ -28,8 +28,8 @@ import { Admin } from '../admin';
   selector: 'app-adminviewadmin',
   standalone: true,
   imports: [FooterComponent,HeaderComponent,MenuComponent],
-  templateUrl: './adminviewadmin.component.html',
-  styleUrls: './adminviewadmin.component.css'
+ templateUrl: './userviewadmin.component.html',  
+  styleUrls: ['./userviewadmin.component.css'] 
 })
 export class AdminviewadminComponent {
   
