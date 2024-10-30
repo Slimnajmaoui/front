@@ -24,18 +24,10 @@ export class AdminindexabsenceComponent {
 
   absences: Absence[] = [];
   abs :any ;
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+
   constructor(public absenceService: AbsenceService, private router: Router) { }
     
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   ngOnInit(): void {
     console.log(this.router.url);
     console.log( window.location.href);
@@ -45,11 +37,7 @@ export class AdminindexabsenceComponent {
     })  
   }
     
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   deleteAbsence(id:number){
     this.absenceService.delete(id).subscribe(res => {
          this.absences = this.absences.filter(item => item._id !== id);
