@@ -27,22 +27,14 @@ export class ChefdeprojeteditabsenceComponent {
   absence!: Absence;
   form!: FormGroup;
       
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+ 
   constructor(
     public absenceService: AbsenceService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
       
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   ngOnInit(): void {
     this.id = this.route.snapshot.params['absenceId'];
     this.absenceService.find(this.id).subscribe((data: Absence)=>{
@@ -60,20 +52,12 @@ export class ChefdeprojeteditabsenceComponent {
     });
   }
       
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   get f(){
     return this.form.controls;
   }
       
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   submit(){
     console.log(this.form.value);
     this.absenceService.update(this.id, this.form.value).subscribe((res:any) => {
