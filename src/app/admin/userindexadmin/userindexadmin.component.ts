@@ -18,7 +18,7 @@ import { Admin } from '../admin';
   standalone: true,
   imports: [CommonModule, RouterModule,FooterComponent,HeaderComponent,MenuComponent],
   templateUrl: './adminindexadmin.component.html',
-  styleUrl: './adminindexadmin.component.css'
+  styleUrls: './adminindexadmin.component.css'
 })
 export class AdminindexadminComponent {
 
