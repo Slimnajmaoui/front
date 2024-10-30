@@ -27,22 +27,14 @@ export class AdminviewabsenceComponent {
   absence!: any;
   abs:any ;
       
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+ 
   constructor(
     public absenceService: AbsenceService,
     private route: ActivatedRoute,
     private router: Router
    ) { }
       
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
           
