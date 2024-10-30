@@ -24,11 +24,7 @@ export class AdmineditabsenceComponent {
   absence!: Absence;
   form!: FormGroup;
       
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+ 
   constructor(
     public absenceService: AbsenceService,
     private route: ActivatedRoute,
@@ -57,20 +53,12 @@ export class AdmineditabsenceComponent {
     });
   }
       
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   get f(){
     return this.form.controls;
   }
       
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   submit(){
     console.log(this.form.value);
     this.absenceService.update(this.id, this.form.value).subscribe((res:any) => {
