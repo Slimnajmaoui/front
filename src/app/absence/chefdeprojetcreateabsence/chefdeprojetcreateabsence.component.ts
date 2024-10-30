@@ -25,21 +25,13 @@ export class ChefdeprojetcreateabsenceComponent {
   
   form!: FormGroup;
       
-  /*------------------------------------------
-  --------------------------------------------
-  Created constructor
-  --------------------------------------------
-  --------------------------------------------*/
+
   constructor(
     public absenceService: AbsenceService,
     private router: Router
   ) { }
       
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   ngOnInit(): void {
     this.form = new FormGroup({
     titre: new FormControl('', [Validators.required]),
@@ -52,11 +44,7 @@ export class ChefdeprojetcreateabsenceComponent {
     });
   }
       
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
+
   get f(){
     return this.form.controls;
   }
