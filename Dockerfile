@@ -24,7 +24,8 @@ FROM nginx:alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copier les fichiers construits dans le répertoire par défaut de Nginx
-COPY --from=builder /app/dist/angular18-crud/browser /usr/share/nginx/html/
+COPY --from=builder /app/dist/pfe1/browser /usr/share/nginx/html/
+
 
 # Exposer le port 80 pour le serveur Nginx
 EXPOSE 80
