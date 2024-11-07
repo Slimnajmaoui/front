@@ -1,0 +1,201 @@
+
+<app-userheader></app-userheader>
+<app-usermenu></app-usermenu>
+
+<!--userkarim-->
+
+
+<!--userslim-->
+
+
+<!--userprojetmanagement-->
+      <div class="main-content">
+        <section class="section">
+          <div class="row ">
+            <div class="card">
+
+
+          
+      
+<div class="container">
+    <h1>Create New Data : </h1>
+  
+    <a href="#" routerLink="/chefdeprojetprofil/index" class="btn btn-danger">Retour Vers Liste</a><br><hr><br>
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="nom">nom:</label>
+            <input 
+                formControlName="nom"
+                id="nom" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['nom'].touched && f['nom'].invalid" class="alert alert-danger">
+                <div *ngIf="f['nom'].errors && f['nom'].errors['required']">nom is required.</div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="prenom">prenom:</label>
+            <input 
+                formControlName="prenom"
+                id="prenom" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['prenom'].touched && f['prenom'].invalid" class="alert alert-danger">
+                <div *ngIf="f['prenom'].errors && f['prenom'].errors['required']">prenom is required.</div>
+            </div>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label for="diplome">séléctionner diplome:</label>
+            <select class="form-select" aria-label="Default select example" formControlName="diplome" id="diplome">
+  <option selected>séléctionner diplome</option>
+  <option value="1">Bac</option>
+  <option value="1">Licence</option>
+  <option value="1">Ingenieur</option>
+  <option value="1">Master</option>
+  <option value="1">Doctorat</option>
+  <option value="1">Autre</option>
+
+</select>
+        </div>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        <div class="form-group">
+            <label for="experience">séléctionner experience:</label>
+            <select class="form-select" aria-label="Default select example" formControlName="experience" id="experience">
+  <option selected>séléctionner experience</option>
+  <option value="1">0 an</option>
+  <option value="1">1 an</option>
+  <option value="1">2 an</option>
+  <option value="1">3 an</option>
+  <option value="1">4 an</option>
+  <option value="1">5 an</option>
+  <option value="1">6 an</option>
+  <option value="1">7 an</option>
+  <option value="3">8 an</option>
+  <option value="3">9 an</option>
+  <option value="3">10 an</option>
+  <option value="3">10 an et plus</option>
+</select>
+        </div>
+
+
+
+
+
+        
+
+        
+
+
+
+
+        <div class="form-group">
+            <label for="niveau">séléctionner niveau:</label>
+            <select class="form-select" aria-label="Default select example" formControlName="niveau" id="niveau">
+  <option selected>séléctionner niveau</option>
+  <option value="1">Bac</option>
+  <option value="1">Licence</option>
+  <option value="1">Ingenieur</option>
+  <option value="1">Master</option>
+  <option value="1">Doctorat</option>
+  <option value="1">Autre</option>
+
+</select>
+        </div>
+
+
+
+
+
+        
+
+
+
+
+
+        <div class="form-group">
+            <label for="etat">séléctionner etat:</label>
+            <select class="form-select" aria-label="Default select example" formControlName="etat" id="etat">
+  <option selected>séléctionner état</option>
+  <option value="1">En cours</option>
+  <option value="2">Valide</option>
+  <option value="3">pas Encore</option>
+  <option value="3">Autre</option>
+</select>
+        </div>
+
+
+
+
+
+        
+
+        <div class="form-group">
+            <label for="datecreation">datecreation:</label>
+            <input 
+                formControlName="datecreation"
+                id="datecreation" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['datecreation'].touched && f['datecreation'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datecreation'].errors && f['datecreation'].errors['required']">datecreation is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="datemodification">datemodification:</label>
+            <input 
+                formControlName="datemodification"
+                id="datemodification" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['datemodification'].touched && f['datemodification'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datemodification'].errors && f['datemodification'].errors['required']">datemodification is required.</div>
+            </div>
+        </div>
+
+
+
+  
+
+  
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button><br><hr><br>
+    </form>
+</div>
+
+
+
+      
+      
+      
+      
+
+ 
+        </div>
+          </div>
+        </section>
+      </div>
+
+
+
+
+<app-userfooter></app-userfooter>

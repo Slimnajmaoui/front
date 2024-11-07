@@ -1,0 +1,132 @@
+
+<app-header></app-header>
+<app-menu></app-menu>
+
+<!--karim-->
+
+
+<!--slim-->
+
+
+      <div class="main-content">
+        <section class="section">
+          <div class="row ">
+            <div class="card">
+
+
+          
+
+<div class="container">
+    <h1>Create New Data : </h1>
+  
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="nom">nom:</label>
+            <input 
+                formControlName="nom"
+                id="nom" 
+                type="text" 
+                [(ngModel)]="this.aff.nom"
+                class="form-control">
+            <div *ngIf="f['nom'].touched && f['nom'].invalid" class="alert alert-danger">
+                <div *ngIf="f['nom'].errors && f['nom'].errors['required']">nom is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">description:</label>
+            <input 
+                formControlName="description"
+                id="description" 
+                type="text" 
+                [(ngModel)]="this.aff.description"
+                class="form-control">
+            <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                <div *ngIf="f['description'].errors && f['description'].errors['required']">description is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="etat">séléctionner etat:</label>
+            <select [(ngModel)]="this.aff.etat" class="form-select" aria-label="Default select example" formControlName="etat" id="etat">
+  <option selected>séléctionner état</option>
+  <option value="1">En cours</option>
+  <option value="2">Valide</option>
+  <option value="3">pas Encore</option>
+  <option value="3">Autre</option>
+</select>
+        </div>
+
+
+        <div class="form-group">
+            <label for="iduser">séléctionner iduser:</label>
+            <select [(ngModel)]="this.aff.user.nom" class="form-select" aria-label="Default select example" formControlName="iduser" id="iduser">
+  <option selected>séléctionner iduser</option>
+  <option *ngFor="let u of alluser" [value]="u.id">{{u.nom}} {{u.prenom}} </option>
+
+</select>
+        </div>
+
+        <div class="form-group">
+            <label for="iduser">séléctionner idprojet:</label>
+            <select  [(ngModel)]="this.aff.projet.id" class="form-select" aria-label="Default select example" formControlName="idprojet" id="idprojet">
+  <option selected>séléctionner idprojet</option>
+  <option *ngFor="let u of pro" [value]="u.id">{{u.nom}}  </option>
+
+</select>
+        </div>
+
+
+
+
+
+        
+
+
+        <div class="form-group">
+            <label for="datecreation">datecreation:</label>
+            <input 
+                formControlName="datecreation"
+                id="datecreation" 
+                type="date" 
+                [(ngModel)]="this.aff.datecreation"
+                class="form-control">
+            <div *ngIf="f['datecreation'].touched && f['datecreation'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datecreation'].errors && f['datecreation'].errors['required']">datecreation is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="datemodification">datemodification:</label>
+            <input 
+                formControlName="datemodification"
+                id="datemodification" 
+                [(ngModel)]="this.aff.datemodification"
+                type="date" 
+                class="form-control">
+            <div *ngIf="f['datemodification'].touched && f['datemodification'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datemodification'].errors && f['datemodification'].errors['required']">datemodification is required.</div>
+            </div>
+        </div>
+
+
+
+  
+
+  
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button><br><hr><br>
+    </form>
+</div>
+
+
+ 
+        </div>
+          </div>
+
+
+        </section>
+
+      </div>
+
+
+<app-footer></app-footer>

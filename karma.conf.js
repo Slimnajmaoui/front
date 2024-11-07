@@ -1,0 +1,7 @@
+{
+    "coverageReporter": {
+    "reporters": [
+    { "type": "lcov" }
+    ]
+    }
+   }

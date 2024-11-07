@@ -1,0 +1,60 @@
+
+<app-header></app-header>
+<app-menu></app-menu>
+
+<!--karim-->
+
+
+<!--slim-->
+
+<div align="center">
+  <img src="../../../assets/logo.jpg" width="500" height="300">
+
+</div> 
+      <div class="main-content">
+        <section class="section">
+          <div class="row ">
+            <div class="card">
+
+
+<div class="container">
+    <h1>PFE ESPRIT 2024 APPLICATION GESTION DE PROJET AGILE TUNISIE</h1>
+    <a href="#" routerLink="/admingroupe/create/" class="btn btn-success">Create New Groupe</a>
+      
+    <table class="table table-striped table-bordered">
+        <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th width="250px">Action</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let groupe of gr">
+                <td>{{ groupe.id }}</td>
+                <td>{{ groupe.nom }}</td>
+                <td>{{ groupe.description }}</td>
+                <td>
+                  <a href="#" [routerLink]="['/admingroupeview',{id:groupe.id} ]" class="btn btn-info">View</a>&nbsp;&nbsp;
+                  <a href="#" [routerLink]="['/admingroupeedit', {id:groupe.id}]" class="btn btn-primary">Edit</a>&nbsp;&nbsp;
+                </td>
+              </tr>
+        </tbody>
+    </table>
+</div>
+
+
+          
+
+ 
+        </div>
+          </div>
+
+
+        </section>
+
+      </div>
+
+
+<app-footer></app-footer>

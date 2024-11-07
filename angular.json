@@ -21,15 +21,45 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
+      {
+        "glob": "**/*",
+        "input": "public",
+        "output": "/"
+      },
+      {
+        "glob": "**/*",
+        "input": "src/assets",
+        "output": "/assets"
+      }
+    ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css",
+              "src/assets/css/app.min.css",
+              "src/assets/css/style.css",
+              "src/assets/css/components.css",
+              "src/assets/css/custom.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/app.min.js",
+              "src/assets/bundles/apexcharts/apexcharts.min.js",
+              "src/assets/js/page/index.js",
+              "src/assets/js/scripts.js",
+              "src/assets/js/custom.js",
+              "src/assets/js/app.min.js",
+              "src/assets/bundles/datatables/datatables.min.js",
+              "src/assets/bundles/datatables/export-tables/buttons.flash.min.js",
+              "src/assets/bundles/datatables/export-tables/jszip.min.js",
+              "src/assets/bundles/datatables/export-tables/pdfmake.min.js",
+              "src/assets/bundles/datatables/export-tables/vfs_fonts.js",
+              "src/assets/bundles/datatables/export-tables/buttons.print.min.js",
+              "src/assets/js/page/datatables.js",
+              "src/assets/js/scripts.js",
+              "src/assets/js/custom.js"
+
+
+            ]
           },
           "configurations": {
             "production": {
@@ -92,5 +122,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

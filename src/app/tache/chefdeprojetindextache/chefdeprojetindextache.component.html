@@ -1,0 +1,62 @@
+
+<app-userheader></app-userheader>
+<app-usermenu></app-usermenu>
+
+<!--userkarim-->
+
+
+<!--userslim-->
+
+
+<!--userprojetmanagement-->
+
+      <div class="main-content">
+        <section class="section">
+          <div class="row ">
+            <div class="card">
+
+
+          
+      
+<div class="container">
+    <h1>PFE ESPRIT 2024 APPLICATION GESTION DE PROJET AGILE TUNISIE</h1>
+    <a href="#" routerLink="/chefdeprojettache/create/" class="btn btn-success">Create New Tache</a>
+      
+    <table class="table table-striped table-bordered">
+        <thead>
+              <tr>
+                <th>ID</th>
+                <th>nom</th>
+                <th>description</th>
+                <th width="250px">Action</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let tache of taches">
+                <td>{{ tache._id }}</td>
+                <td>{{ tache.nom }}</td>
+                <td>{{ tache.description }}</td>
+                <td>
+                  <a href="#" [routerLink]="['/chefdeprojettache/', tache._id, 'view']" class="btn btn-info">View</a>&nbsp;&nbsp;
+                  <a href="#" [routerLink]="['/chefdeprojettache/', tache._id, 'edit']" class="btn btn-primary">Edit</a>&nbsp;&nbsp;
+                  <button type="button" (click)="deleteTache(tache._id)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+</div>
+
+      
+      
+      
+      
+
+ 
+        </div>
+          </div>
+        </section>
+      </div>
+
+
+
+<app-userfooter></app-userfooter>

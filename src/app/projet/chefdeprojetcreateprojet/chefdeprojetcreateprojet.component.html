@@ -1,0 +1,135 @@
+
+<app-userheader></app-userheader>
+<app-usermenu></app-usermenu>
+
+<!--userkarim-->
+
+
+<!--userslim-->
+
+
+<!--userprojetmanagement-->
+      <div class="main-content">
+        <section class="section">
+          <div class="row ">
+            <div class="card">
+
+
+          
+      
+      
+<div class="container">
+    <h1>Create New Data : </h1>
+  
+    <a href="#" routerLink="/chefdeprojetprojet/index" class="btn btn-danger">Retour Vers Liste</a><br><hr><br>
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="nom">nom:</label>
+            <input 
+                formControlName="nom"
+                id="nom" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['nom'].touched && f['nom'].invalid" class="alert alert-danger">
+                <div *ngIf="f['nom'].errors && f['nom'].errors['required']">nom is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">description:</label>
+            <input 
+                formControlName="description"
+                id="description" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                <div *ngIf="f['description'].errors && f['description'].errors['required']">description is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="datedebut">datedebut:</label>
+            <input 
+                formControlName="datedebut"
+                id="datedebut" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['datedebut'].touched && f['datedebut'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datedebut'].errors && f['datedebut'].errors['required']">datedebut is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="datefin">datefin:</label>
+            <input 
+                formControlName="datefin"
+                id="datefin" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['datefin'].touched && f['datefin'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datefin'].errors && f['datefin'].errors['required']">datefin is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="etat">etat:</label>
+            <input 
+                formControlName="etat"
+                id="etat" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['etat'].touched && f['etat'].invalid" class="alert alert-danger">
+                <div *ngIf="f['etat'].errors && f['etat'].errors['required']">etat is required.</div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="datecreation">datecreation:</label>
+            <input 
+                formControlName="datecreation"
+                id="datecreation" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['datecreation'].touched && f['datecreation'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datecreation'].errors && f['datecreation'].errors['required']">datecreation is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="datemodification">datemodification:</label>
+            <input 
+                formControlName="datemodification"
+                id="datemodification" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['datemodification'].touched && f['datemodification'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datemodification'].errors && f['datemodification'].errors['required']">datemodification is required.</div>
+            </div>
+        </div>
+
+
+
+  
+
+  
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button><br><hr><br>
+    </form>
+</div>
+
+
+      
+      
+      
+
+ 
+        </div>
+          </div>
+        </section>
+      </div>
+
+
+
+
+
+<app-userfooter></app-userfooter>

@@ -1,0 +1,174 @@
+
+<app-userheader></app-userheader>
+<app-usermenu></app-usermenu>
+
+<!--userkarim-->
+
+
+<!--userslim-->
+
+
+<!--userprojetmanagement-->
+      <div class="main-content">
+        <section class="section">
+          <div class="row ">
+            <div class="card">
+
+
+          
+
+<div class="container">
+    <h1>Create New Data : </h1>
+  
+    <a href="#" routerLink="/useravtache/index" class="btn btn-danger">Retour Vers Liste</a><br><hr><br>
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="nom">nom:</label>
+            <input 
+                formControlName="nom"
+                id="nom" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['nom'].touched && f['nom'].invalid" class="alert alert-danger">
+                <div *ngIf="f['nom'].errors && f['nom'].errors['required']">nom is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">description:</label>
+            <input 
+                formControlName="description"
+                id="description" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                <div *ngIf="f['description'].errors && f['description'].errors['required']">description is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="datedebut">datedebut:</label>
+            <input 
+                formControlName="datedebut"
+                id="datedebut" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['datedebut'].touched && f['datedebut'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datedebut'].errors && f['datedebut'].errors['required']">datedebut is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="datefin">datefin:</label>
+            <input 
+                formControlName="datefin"
+                id="datefin" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['datefin'].touched && f['datefin'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datefin'].errors && f['datefin'].errors['required']">datefin is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="idprojet">idprojet:</label>
+            <input 
+                formControlName="idprojet"
+                id="idprojet" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['idprojet'].touched && f['idprojet'].invalid" class="alert alert-danger">
+                <div *ngIf="f['idprojet'].errors && f['idprojet'].errors['required']">idprojet is required.</div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="etat">séléctionner etat:</label>
+            <select class="form-select" aria-label="Default select example" formControlName="etat" id="etat">
+  <option selected>séléctionner état</option>
+  <option value="1">En cours</option>
+  <option value="2">Valide</option>
+  <option value="3">pas Encore</option>
+  <option value="3">Autre</option>
+</select>
+        </div>
+
+
+
+
+
+
+        <div class="form-group">
+            <label for="avancement">séléctionner avancement:</label>
+            <select class="form-select" aria-label="Default select example" formControlName="avancement" id="avancement">
+  <option selected>séléctionner avancement</option>
+  <option value="1">0%</option>
+  <option value="1">10%</option>
+  <option value="1">20%</option>
+  <option value="1">30%</option>
+  <option value="1">40%</option>
+  <option value="1">50%</option>
+  <option value="1">60%</option>
+  <option value="1">70%</option>
+  <option value="3">80%</option>
+  <option value="3">90%</option>
+  <option value="3">100%</option>
+</select>
+        </div>
+
+
+
+
+
+        
+
+        <div class="form-group">
+            <label for="datecreation">datecreation:</label>
+            <input 
+                formControlName="datecreation"
+                id="datecreation" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['datecreation'].touched && f['datecreation'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datecreation'].errors && f['datecreation'].errors['required']">datecreation is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="datemodification">datemodification:</label>
+            <input 
+                formControlName="datemodification"
+                id="datemodification" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['datemodification'].touched && f['datemodification'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datemodification'].errors && f['datemodification'].errors['required']">datemodification is required.</div>
+            </div>
+        </div>
+
+
+
+  
+
+  
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button><br><hr><br>
+    </form>
+</div>
+
+
+      
+      
+      
+      
+      
+
+ 
+        </div>
+          </div>
+        </section>
+      </div>
+
+
+
+
+<app-userfooter></app-userfooter>

@@ -1,0 +1,63 @@
+
+<app-userheader></app-userheader>
+<app-usermenu></app-usermenu>
+
+<!--userkarim-->
+
+
+<!--userslim-->
+
+
+<!--userprojetmanagement-->
+      <div class="main-content">
+        <section class="section">
+          <div class="row ">
+            <div class="card">
+
+
+          
+
+<div class="container">
+    <h1>PFE ESPRIT 2024 APPLICATION GESTION DE PROJET AGILE TUNISIE</h1>
+    <a href="#" routerLink="/useravtache/create/" class="btn btn-success">Create New Avtache</a>
+      
+    <table class="table table-striped table-bordered">
+        <thead>
+              <tr>
+                <th>ID</th>
+                <th>nom</th>
+                <th>description</th>
+                <th width="250px">Action</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let avtache of avtaches">
+                <td>{{ avtache._id }}</td>
+                <td>{{ avtache.nom }}</td>
+                <td>{{ avtache.description }}</td>
+                <td>
+                  <a href="#" [routerLink]="['/useravtache/', avtache._id, 'view']" class="btn btn-info">View</a>&nbsp;&nbsp;
+                  <a href="#" [routerLink]="['/useravtache/', avtache._id, 'edit']" class="btn btn-primary">Edit</a>&nbsp;&nbsp;
+                  <button type="button" (click)="deleteAvtache(avtache._id)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+</div>
+
+      
+      
+      
+      
+      
+
+ 
+        </div>
+          </div>
+        </section>
+      </div>
+
+
+
+
+<app-userfooter></app-userfooter>

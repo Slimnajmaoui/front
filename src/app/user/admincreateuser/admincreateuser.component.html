@@ -1,0 +1,105 @@
+
+<app-header></app-header>
+<app-menu></app-menu>
+
+<!--karim-->
+
+
+<!--slim-->
+
+
+      <div class="main-content">
+        <section class="section">
+          <div class="row ">
+            <div class="card">
+
+
+
+<div class="container">
+    <h1>Create New Data : </h1>
+  
+    <a href="#" routerLink="/adminuser/index" class="btn btn-danger">Retour Vers Liste</a><br><hr><br>
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-group">
+            <label for="nom">Nom:</label>
+            <input 
+                formControlName="nom"
+                id="nom" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['nom'].touched && f['nom'].invalid" class="alert alert-danger">
+                <div *ngIf="f['nom'].errors && f['nom'].errors['required']">nom is required.</div>
+            </div>
+        </div> <div class="form-group">
+            <label for="prenom">prenom:</label>
+            <input 
+                formControlName="prenom"
+                id="prenom" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['prenom'].touched && f['prenom'].invalid" class="alert alert-danger">
+                <div *ngIf="f['prenom'].errors && f['prenom'].errors['required']">prenom is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">email:</label>
+            <input 
+                formControlName="email"
+                id="email" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                <div *ngIf="f['email'].errors && f['email'].errors['required']">email is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="motdepasse">motdepasse:</label>
+            <input 
+                formControlName="mdp"
+                id="mdp" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['mdp'].touched && f['mdp'].invalid" class="alert alert-danger">
+                <div *ngIf="f['mdp'].errors && f['mdp'].errors['required']">motdepasse is required.</div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="profil">Profil:</label>
+         
+            <select class="form-select" aria-label="Default select example" formControlName="profil" id="profil">
+                <option selected>séléctionner Profil</option>
+                <option value="Admin">Admin</option>
+                <option value="Developpeur">Developpeur</option>
+              
+              </select>
+         
+        </div>
+  
+
+  
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button><br><hr><br>
+    </form>
+</div>
+
+
+          
+
+ 
+        </div>
+          </div>
+
+
+        </section>
+
+      </div>
+
+
+
+
+<app-footer></app-footer>
+
+

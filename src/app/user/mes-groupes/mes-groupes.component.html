@@ -1,0 +1,58 @@
+
+<app-header></app-header>
+<app-menu></app-menu>
+
+<!--karim-->
+
+
+<!--slim-->
+
+
+      <div class="main-content">
+        <section class="section">
+          <div class="row ">
+            <div class="card">
+
+
+          
+<div class="container">
+    <h1>PFE ESPRIT 2024 APPLICATION GESTION DE PROJET AGILE TUNISIE</h1>
+    <a href="#" routerLink="/adminaffgroupe/create/" class="btn btn-success">Create New Affgroupe</a>
+      
+    <table class="table table-striped table-bordered">
+        <thead>
+              <tr>
+                <th>ID</th>
+                <th>nom</th>
+                <th>description</th>
+                <th width="250px">Action</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let affgroupe of aff">
+                <td>{{ affgroupe.id }}</td>
+                <td>{{ affgroupe.nom }}</td>
+                <td>{{ affgroupe.description }}</td>
+                <td>
+                  <a href="#" [routerLink]="['/adminaffgroupeview',{id:affgroupe.id}]" class="btn btn-info">View</a>&nbsp;&nbsp;
+                  <a href="#" [routerLink]="['/adminaffgroupe/', affgroupe._id, 'edit']" class="btn btn-primary">Edit</a>&nbsp;&nbsp;
+                  <button type="button" (click)="deleteAffgroupe(affgroupe._id)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+</div>
+
+
+ 
+        </div>
+          </div>
+
+
+        </section>
+
+      </div>
+
+
+
+<app-footer></app-footer>

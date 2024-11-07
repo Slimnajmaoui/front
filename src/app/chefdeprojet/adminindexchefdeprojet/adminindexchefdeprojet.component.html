@@ -1,0 +1,62 @@
+
+<app-header></app-header>
+<app-menu></app-menu>
+
+<!--karim-->
+
+
+<!--slim-->
+<div align="center">
+  <img src="../../../assets/logo.jpg" width="500" height="300">
+
+</div> 
+
+      <div class="main-content">
+        <section class="section">
+          <div class="row ">
+            <div class="card">
+
+
+      
+<div class="container">
+    <h1>PFE ESPRIT 2024 APPLICATION GESTION DE PROJET AGILE TUNISIE</h1>
+    <a href="#" routerLink="/adminchefdeprojet/create/" class="btn btn-success">Create New Chefdeprojet</a>
+      
+    <table class="table table-striped table-bordered">
+        <thead>
+              <tr>
+                <th>ID</th>
+                <th>email</th>
+                <th width="250px">Action</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let chefdeprojet of chef">
+                <td>{{ chefdeprojet.id }}</td>
+                <td>{{ chefdeprojet.email }}</td>
+                <td>
+                  <a href="#" [routerLink]="['/adminchefdeprojetview',{id:chefdeprojet.id} ]" class="btn btn-info">View</a>&nbsp;&nbsp;
+                  <a href="#" [routerLink]="['/adminchefdeprojetedit',{id:chefdeprojet.id} ]" class="btn btn-primary">Edit</a>&nbsp;&nbsp;
+                  <button type="button" (click)="deleteChefdeprojet(chefdeprojet._id)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+</div>
+
+
+          
+
+ 
+        </div>
+          </div>
+
+
+        </section>
+
+      </div>
+
+
+
+
+<app-footer></app-footer>

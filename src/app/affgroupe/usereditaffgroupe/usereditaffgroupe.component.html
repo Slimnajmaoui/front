@@ -1,0 +1,133 @@
+
+<app-userheader></app-userheader>
+<app-usermenu></app-usermenu>
+
+<!--userkarim-->
+
+
+<!--userslim-->
+
+
+<!--userprojetmanagement-->
+      <div class="main-content">
+        <section class="section">
+          <div class="row ">
+            <div class="card">
+
+
+          
+      
+      
+<div class="container">
+    <h1>Create New Data : </h1>
+  
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="nom">nom:</label>
+            <input 
+                formControlName="nom"
+                id="nom" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['nom'].touched && f['nom'].invalid" class="alert alert-danger">
+                <div *ngIf="f['nom'].errors && f['nom'].errors['required']">nom is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">description:</label>
+            <input 
+                formControlName="description"
+                id="description" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                <div *ngIf="f['description'].errors && f['description'].errors['required']">description is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="etat">séléctionner etat:</label>
+            <select class="form-select" aria-label="Default select example" formControlName="etat" id="etat">
+  <option selected>séléctionner état</option>
+  <option value="1">En cours</option>
+  <option value="2">Valide</option>
+  <option value="3">pas Encore</option>
+  <option value="3">Autre</option>
+</select>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label for="iduser">séléctionner iduser:</label>
+            <select class="form-select" aria-label="Default select example" formControlName="iduser" id="iduser">
+  <option selected>séléctionner iduser</option>
+  <option value="1">USER 1 </option>
+  <option value="1">USER 2 </option>
+  <option value="1">USER 3 </option>
+  <option value="1">USER 4 </option>
+  <option value="1">USER 5 </option>
+  <option value="1">USER 6 </option>
+  <option value="1">USER N </option>
+  <option value="3">Autre</option>
+</select>
+        </div>
+
+
+
+
+
+        
+
+
+        <div class="form-group">
+            <label for="datecreation">datecreation:</label>
+            <input 
+                formControlName="datecreation"
+                id="datecreation" 
+                type="date" 
+                class="form-control">
+            <div *ngIf="f['datecreation'].touched && f['datecreation'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datecreation'].errors && f['datecreation'].errors['required']">datecreation is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="datemodification">datemodification:</label>
+            <input 
+                formControlName="datemodification"
+                id="datemodification" 
+                type="date" 
+                class="form-control">
+            <div *ngIf="f['datemodification'].touched && f['datemodification'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datemodification'].errors && f['datemodification'].errors['required']">datemodification is required.</div>
+            </div>
+        </div>
+
+
+
+  
+
+  
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button><br><hr><br>
+    </form>
+</div>
+
+
+
+      
+      
+      
+
+ 
+        </div>
+          </div>
+        </section>
+      </div>
+
+
+
+
+<app-userfooter></app-userfooter>

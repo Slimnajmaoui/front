@@ -1,0 +1,63 @@
+
+
+<app-header></app-header>
+<app-menu></app-menu>
+
+<!--karim-->
+
+
+<!--slim-->
+
+
+      <div class="main-content">
+        <section class="section">
+          <div class="row ">
+            <div class="card">
+
+
+          
+<div class="container">
+    <h1>Create New Data : </h1>
+  
+    <a href="#" routerLink="/adminchefdeprojet/index" class="btn btn-danger">Retour Vers Liste</a><br><hr><br>
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="email">email:</label>
+            <input 
+                formControlName="email"
+                id="email" 
+                type="text" 
+                [(ngModel)]="this.chef.email"
+                class="form-control">
+            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                <div *ngIf="f['email'].errors && f['email'].errors['required']">email is required.</div>
+            </div>
+        </div>
+      
+
+
+
+  
+
+  
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button><br><hr><br>
+    </form>
+</div>
+
+
+
+ 
+        </div>
+          </div>
+
+
+        </section>
+
+      </div>
+
+
+<app-footer></app-footer>
+
+

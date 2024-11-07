@@ -1,0 +1,18 @@
+<li class="dropdown active">
+              <a href="adminabsence/index" class="nav-link"><i data-feather="monitor"></i><span>Conges</span></a>
+</li>
+<li class="dropdown active">
+              <a href="adminabsence/index" class="nav-link"><i data-feather="monitor"></i><span>Groupe</span></a>
+</li>
+<li class="dropdown active">
+              <a href="adminabsence/index" class="nav-link"><i data-feather="monitor"></i><span>Profil</span></a>
+</li>
+<li class="dropdown active">
+              <a href="adminabsence/index" class="nav-link"><i data-feather="monitor"></i><span>Projets</span></a>
+</li>
+<li class="dropdown active">
+              <a href="adminabsence/index" class="nav-link"><i data-feather="monitor"></i><span>Tâches</span></a>
+</li>
+<li class="dropdown active">
+              <a href="adminabsence/index" class="nav-link"><i data-feather="monitor"></i><span>Users</span></a>
+</li>
