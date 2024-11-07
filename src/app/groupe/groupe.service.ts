@@ -12,7 +12,7 @@ import { Groupe } from './groupe';
 })
 export class GroupeService {
     
-  private apiURL = "http://localhost:8080/api";
+  private apiURL = "http://localhost:8081/api";
       
   /*------------------------------------------
   --------------------------------------------

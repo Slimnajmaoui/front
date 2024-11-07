@@ -12,7 +12,7 @@ import { Afftache } from './afftache';
 })
 export class AfftacheService {
     
-  private apiURL = "http://localhost:8080/api";
+  private apiURL = "http://localhost:8081/api";
       
   /*------------------------------------------
   --------------------------------------------
