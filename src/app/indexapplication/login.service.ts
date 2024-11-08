@@ -1,10 +1,9 @@
+
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable, map } from "rxjs";
 import { environment } from "../../environment";
 import { User } from "./userconnexion";
-import { HttpHeaders } from '@angular/common/http';
-
 
 @Injectable({
   providedIn: "root",
@@ -25,13 +24,6 @@ export class connexionService {
   }
 
   login(connexion: any) {
-    // Ajouter les options de requête avec les en-têtes et withCredentials pour inclure les cookies
-    const httpOptions = {
-      headers: new HttpHeaders({
-        "Content-Type": "application/json"
-      }),
-      withCredentials: true  // Inclure les cookies dans la requête pour le CORS
-    };
     return this.http.post<any>(`${environment.apiUrl}/auth/login`, connexion).pipe(
       map((userconnexion) => {
         if (userconnexion && userconnexion.token) {
