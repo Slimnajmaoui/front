@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable, map } from "rxjs";
 import { environment } from "../../environment";
@@ -7,7 +7,7 @@ import { User } from "./userconnexion";
 @Injectable({
   providedIn: "root",
 })
-export class ConnexionService {
+export class connexionService {
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
 
@@ -30,11 +30,9 @@ export class ConnexionService {
       }),
       withCredentials: true  // Inclure les cookies dans la requête pour le CORS
     };
-
-    return this.http.post<any>(`${environment.apiUrl}/auth/login`, connexion, httpOptions).pipe(
+    return this.http.post<any>(`${environment.apiUrl}/auth/login`, connexion).pipe(
       map((userconnexion) => {
         if (userconnexion && userconnexion.token) {
-          // Enregistrer les informations utilisateur dans le localStorage
           localStorage.setItem("User", JSON.stringify(userconnexion));
           localStorage.setItem("Role", userconnexion.profil);
           localStorage.setItem("Email", userconnexion.email);
