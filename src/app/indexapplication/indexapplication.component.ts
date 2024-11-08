@@ -1,36 +1,54 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { connexionService } from './login.service';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { connexionService } from './login.service';  // Assurez-vous que le chemin est correct
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-indexapplication',
   standalone: true,
-  imports: [FormsModule,ReactiveFormsModule],
+  imports: [ReactiveFormsModule],  // ReactiveFormsModule est suffisant
   templateUrl: './indexapplication.component.html',
-  styleUrl: './indexapplication.component.css'
+  styleUrls: ['./indexapplication.component.css']  // Assurez-vous que le fichier CSS est correct
 })
 export class IndexapplicationComponent {
-loginform!:FormGroup ;
+  loginform!: FormGroup;
 
-constructor(private service:connexionService,private route:Router){}
-ngOnInit(){
-  this.loginform = new FormGroup({
-    email: new FormControl("", [Validators.required ]),
-    password: new FormControl("", [Validators.required ]),
-  
+  constructor(private service: connexionService, private route: Router) {}
 
-  })
+  ngOnInit() {
+    this.loginform = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.email]), // Ajout de la validation pour le format de l'email
+      password: new FormControl('', [Validators.required]), // Le mot de passe est requis
+    });
+  }
+
+  connexion() {
+    if (this.loginform.invalid) {
+      // Vérification si le formulaire est valide avant d'envoyer la requête
+      window.alert("Veuillez remplir correctement tous les champs.");
+      return;
+    }
+
+    this.service.login(this.loginform.value).subscribe(
+      (res) => {
+        // Si la connexion réussie, on sauvegarde le token et autres informations dans le localStorage
+        localStorage.setItem("Token", res.token);
+        localStorage.setItem("Email", res.email); // Assurez-vous que la réponse contient ces champs
+        localStorage.setItem("Role", res.profil);
+        localStorage.setItem("Id", res.id);
+
+        window.alert("Connexion réussie!");
+
+        // Optionnel : Ajoutez un délai pour rediriger après la connexion
+        setTimeout(() => {
+          this.route.navigate(['adminuser/index']); // Rediriger vers la page après connexion
+        }, 700); // 700ms pour un léger délai
+      },
+      (error) => {
+        // Gérer les erreurs ici
+        window.alert("Erreur de connexion. Veuillez vérifier vos informations.");
+        console.error('Erreur lors de la connexion', error);  // Affichez l'erreur dans la console
+      }
+    );
+  }
 }
-connexion(){
-  this.service.login(this.loginform.value).subscribe((res)=>{
-
-    setTimeout(() => {
-      window.location.reload(); 
-    }, 700); 
-    window.alert("connexion avec succées")
-this.route.navigate(["adminuser/index"]);
-  })
-
- 
-}}
