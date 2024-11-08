@@ -3,6 +3,8 @@ import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable, map } from "rxjs";
 import { environment } from "../../environment";
 import { User } from "./userconnexion";
+import { HttpHeaders } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: "root",
