@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { connexionService } from './login.service';  // Assurez-vous que le chemin est correct
 import { Router } from '@angular/router';
+import { LoginResponse } from './login-response.model';  // Assurez-vous d'importer le modèle
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-indexapplication',
@@ -30,7 +32,7 @@ export class IndexapplicationComponent {
     }
 
     this.service.login(this.loginform.value).subscribe(
-      (res) => {
+      (res: LoginResponse) => {  // Typage de 'res' avec LoginResponse
         // Si la connexion réussie, on sauvegarde le token et autres informations dans le localStorage
         localStorage.setItem("Token", res.token);
         localStorage.setItem("Email", res.email); // Assurez-vous que la réponse contient ces champs
@@ -44,7 +46,7 @@ export class IndexapplicationComponent {
           this.route.navigate(['adminuser/index']); // Rediriger vers la page après connexion
         }, 700); // 700ms pour un léger délai
       },
-      (error) => {
+      (error: HttpErrorResponse) => {  // Typage de 'error' avec HttpErrorResponse
         // Gérer les erreurs ici
         window.alert("Erreur de connexion. Veuillez vérifier vos informations.");
         console.error('Erreur lors de la connexion', error);  // Affichez l'erreur dans la console
