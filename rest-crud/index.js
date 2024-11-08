@@ -37,7 +37,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
-app.use(cors());
+app.use(cors({
+  origin: 'https://20.55.80.124:8090'
+}));
   
 /* Static directory path */
 app.use(express.static(path.join(__dirname, 'dist/angular-mean-crud-tutorial')));
