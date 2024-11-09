@@ -10,7 +10,7 @@ import { User } from "./userconnexion";
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
   
-    constructor(private http: HttpClient, private httpClient: HttpClient) {
+    constructor(private http: HttpClient) {
   
         this.currentUserSubject = new BehaviorSubject<User>(
           JSON.parse(localStorage.getItem("currentUser")|| '{}')
@@ -23,7 +23,7 @@ import { User } from "./userconnexion";
       }
     
   login(connexion:any) {
-    return this.http.post<any>("http://localhost:8081/auth/login", connexion).pipe(
+    return this.http.post<any>("http://20.55.80.124:8090/auth/login", connexion).pipe(
       map((userconnexion) => {
         if (userconnexion && userconnexion.token) {
           localStorage.setItem("User", JSON.stringify(userconnexion));
