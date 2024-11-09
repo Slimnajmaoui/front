@@ -38,7 +38,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(cors({
-  origin: 'http://20.55.80.124'
+  origin: "*"
 }));
   
 /* Static directory path */
