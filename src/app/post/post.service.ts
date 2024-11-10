@@ -11,7 +11,7 @@ import { Post } from './post';
 })
 export class PostService {
     
-  private apiURL = "http://localhost:8000/api";
+  private apiURL = "http://20.55.80.124:8090/api";
       
   /*------------------------------------------
   --------------------------------------------
