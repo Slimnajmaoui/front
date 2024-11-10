@@ -12,7 +12,7 @@ import { Affgroupe } from './affgroupe';
 })
 export class AffgroupeService {
     
-  private apiURL = "http://localhost:8081/api";
+  private apiURL = "http://20.55.80.124:8090/api";
       
   /*------------------------------------------
   --------------------------------------------
