@@ -11,8 +11,8 @@ import { Chefdeprojet } from './chefdeprojet';
   providedIn: 'root'
 })
 export class ChefdeprojetService {
-    
-  private apiURL = "http://localhost:8081/api";
+  
+  private apiURL = "http://20.55.80.124:8090/api";
       
   /*------------------------------------------
   --------------------------------------------
