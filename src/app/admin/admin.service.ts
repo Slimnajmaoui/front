@@ -12,7 +12,7 @@ import { Admin } from './admin';
 })
 export class AdminService {
     
-  private apiURL = "http://localhost:8000/apiadmin";
+  private apiURL = "http://20.55.80.124:8090/apiadmin";
       
   /*------------------------------------------
   --------------------------------------------
