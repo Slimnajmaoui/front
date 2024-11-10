@@ -12,7 +12,7 @@ import { Competence } from './competence';
 })
 export class CompetenceService {
     
-  private apiURL = "http://localhost:8000/apicompetence";
+  private apiURL = "http://20.55.80.124:8090/api";
       
   /*------------------------------------------
   --------------------------------------------
