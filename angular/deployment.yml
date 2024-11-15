@@ -1,21 +1,19 @@
-
-apiVersion: apps/v1 # For versions before 1.9.0 use apps/v1beta2
-kind: Deployment    
-metadata:   # Data that helps  uniquely identify the object (using name, UID and namespace)          
+apiVersion: apps/v1  # Pour Kubernetes v1.9 et plus
+kind: Deployment
+metadata:
   name: angular-k8s-deployment
-spec:  # What state you desire for the object              
-  selector:  # The selector field defines how the deployment finds which pod to manage       
+spec:
+  selector:
     matchLabels:
       app: angular-k8s-deployment
-  replicas: 3  # Tells the deployment to run 3 pods matching the template      
+  replicas: 3
   template:
     metadata:
-      labels:  # Labels are used as indentifying attributes for objects such as pods and replication controller.      
+      labels:
         app: angular-k8s-deployment
     spec:
       containers:
         - name: angular-k8s-deployment
-          # image: angular-app:latest
           image: nejmaoui/frontend:angular
           imagePullPolicy: Always
           env:
@@ -25,20 +23,19 @@ spec:  # What state you desire for the object
                   name: service-spring
                   key: baseUrl
           ports:
-          - containerPort: 80          
+            - containerPort: 80
 ---
-    apiVersion: v1
-    kind: Service
-    metadata:
-      name: angular-k8s-service
-      labels:
-        name: angular-k8s-deployment
-    spec:
-      ports:
-        - nodePort: 30170 # make the service available to network requests from external clients
-          port: 80        # access the service via external port no
-          targetPort: 80  # port number that container listening on
-          protocol: TCP   
-      selector:           
-        app: angular-k8s-deployment
-      type: NodePort     # which expose the application on a port across a each of your nodes
+apiVersion: v1
+kind: Service
+metadata:
+  name: angular-k8s-service
+  labels:
+    name: angular-k8s-deployment
+spec:
+  ports:
+    - port: 80        # Port interne du service
+      targetPort: 80   # Port du conteneur que l'application écoute
+      protocol: TCP
+  selector:
+    app: angular-k8s-deployment
+  type: LoadBalancer  # Remplace NodePort par LoadBalancer
