@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  baseUrl: http://20.55.80.124:30163
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: service-spring
